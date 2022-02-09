@@ -1,3 +1,4 @@
+from matplotlib import projections
 from params_f16 import load_f16
 from numpy import arange, sin, cos
 import pandas as pd
@@ -5,10 +6,12 @@ from scipy.integrate import odeint
 from eqm import eqm
 import matplotlib.pyplot as plot
 import matplotlib
+import warnings
+warnings.filterwarnings("ignore")
 
 params = load_f16()
 params.xcg = 0.35
-params.VT_ftps = 502
+params.VT_ftps = 5
 params.alt_ft = 0
 X0 = [
    502.,
@@ -54,14 +57,17 @@ x1=y[:,9]
 y1=y[:,10]
 z1=y[:,11]
 
-font = {'family' : 'Ariel',
-        'size'   : 12}
+# font = {'family' : 'Ariel',
+        # 'size'   : 12}
 
-matplotlib.rc('font', **font)    
+# matplotlib.rc('font', **font)    
 
 fig = plot.figure()
 ax = fig.add_subplot(111, projection='3d')
+# ax = fig.add_subplot(111)
+# ax=plot.subplot(111,projections='3d')
 ax.plot(x1,y1,z1)
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_zlabel('z')
+plot.show()

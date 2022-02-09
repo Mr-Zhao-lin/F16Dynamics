@@ -103,4 +103,5 @@ ax3=plot.subplot(313)
 ax3.plot(t, y[:,11])
 ax3.set_xlabel('Time(s)')
 ax3.set_ylabel('H(ft)')
+plot.show()
 
