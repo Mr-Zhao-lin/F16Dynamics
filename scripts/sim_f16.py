@@ -7,16 +7,18 @@ import pandas as pd
 from scipy.integrate import odeint
 from numpy import arange, sin, cos
 import matplotlib.pyplot as plot
+import warnings
+warnings.filterwarnings("ignore")
 
 params = load_f16()
 params.xcg = .35
 params.coordinated_turn = 0
-params.turn_rate_rps = 0.0
-params.roll_rate_rps = 0.0
-params.pitch_rate_rps = 0.0
-params.phi_rad = 0.0
-params.gamma_rad = 0.0
-params.stability_axis_roll = 0
+params.turn_rate_rps = 0.0  #偏航
+params.roll_rate_rps = 0.0  #滚转
+params.pitch_rate_rps = 0.0  #俯仰
+params.phi_rad = 0.0   #
+params.gamma_rad = 0.0   #滚转角
+params.stability_axis_roll = 0    #
 params.VT_ftps = 502
 params.alt_ft = 0
 def costf16(x):
@@ -53,8 +55,8 @@ controls=pd.Series()
 
 controls.throttle = S[0]
 controls.elev_deg = S[1]
-controls.ail_deg = 0.0
-controls.rudder_deg = 0.0
+controls.ail_deg = 0
+controls.rudder_deg = 0
 
 def f16_model(t,X):
     xd, _ = eqm(t, X, controls, params)

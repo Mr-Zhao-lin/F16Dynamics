@@ -1,3 +1,4 @@
+# 配平脚本
 from engine_f16 import tgear
 from eqm import eqm
 from params_f16 import load_f16

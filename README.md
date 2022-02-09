@@ -23,7 +23,7 @@ There are two scripts which simulate the equations of motion:
 
 A description of each file is given below.
 
-## Simulate elevator step
+## Simulate elevator step   升降舵
 The script *sim_f16.py* simulates the dynamics of an F16 to a step change in the elevator. The results of the simulation are shown in the figure below. The order of the trends are:
 1. Elevator step change
 2. Acceleration in the z axis (nz)

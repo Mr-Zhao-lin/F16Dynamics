@@ -1,3 +1,4 @@
+# 发动机模型
 def rtau(dp): 
     '''
     used by function pdot

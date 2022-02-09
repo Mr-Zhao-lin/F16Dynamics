@@ -1,4 +1,5 @@
 # exec('atmosphere/atmos_constants.sci');
+# 大气方程
 from atmos_constants import atmos
 from numpy import exp
 

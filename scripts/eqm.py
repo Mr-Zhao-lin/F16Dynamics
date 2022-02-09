@@ -1,3 +1,4 @@
+# 运动学和动力学方程
 from atmosphere import atmosphere
 from atmos_constants import atmos
 from engine_f16 import tgear, pdot, thrust
